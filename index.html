@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/quotes-app/assets/favicon.17e50649.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <script type="module" crossorigin src="/quotes-app/assets/index.b103df06.js"></script>
+  <link rel="stylesheet" href="/quotes-app/assets/index.5e533d0f.css">
+</head>
+
+<body>
+  <div x-data="open">
+    <div x-show="register">
+      Looks like your account does not exist yet. Register here.
+      <!-- <div><label for="user">Username</label>
+        <input type="text" name="username" class="user" x-model="user1">
+      </div>
+      <div>
+
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" x-model="password1" placeholder="Password">
+      </div>
+      <button x-on:click="register()">Register</button> -->
+    </div>
+
+    <span x-text="passwordError"></span>
+
+    <div class="login align-items-center justify-content-center mt-5 p-3" x-show="hide">
+
+      <div class="mt-3 mb-3"><label for="user">Username</label>
+        <input type="text" name="username" class="user" x-model="user">
+      </div>
+      <div class="mt-3 mb-3"><label for="exampleInputPassword1">Password</label>
+        <input type="password" class="password" x-model="password" placeholder="Password">
+      </div>
+      <button x-on:click="loggingIn()">login</button>
+
+    </div>
+
+    <div>
+      <div x-data="loveCounter" x-show="open">
+        <h1>Show some heart</h1>
+        <div x-text="hearts()">
+        </div>
+        <div>
+          <button @click="love">Show 💟</button>
+        </div>
+      </div>
+      <div x-data="quoteApp" class="quoteApp quote" x-show="open">
+        <h1>Quote App</h1>
+        <button @click="init()">Next quote 📢</button>
+        <div class="quote">
+          <div x-text="quote.quote" class="content"></div>
+          <div>
+            <strong>by </strong><span x-text="quote.author"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</body>
+
+</html>
